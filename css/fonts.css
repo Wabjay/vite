@@ -6,8 +6,8 @@
 */
 
 @font-face {
-  font-family: sailecBlack;
-  src: url(../fonts/SailecBlack.otf);
+  font-family: inter;
+  src: url(fonts/Inter-Black.otf);
 }
 @font-face {
   font-family: sailecBlack-Italic;

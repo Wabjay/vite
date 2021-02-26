@@ -4,7 +4,7 @@
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
-@import url("../css/fonts.css");
+@import url("fonts.css");
 body{
   margin: 0;
 }
