@@ -388,6 +388,7 @@ height: 44px;
  .textInput input{
     padding: 0;
     padding-left: 16px;
+    padding-right: 16px;
     margin: 0;
     width: 100%;
     max-width: 474px;

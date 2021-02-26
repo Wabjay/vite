@@ -34,6 +34,7 @@
   display: block;
 }
 #congrats .cover{
+  width: 90%;
   background: #0370D5;
 border-radius: 24px;
 text-align: center;
