@@ -1,0 +1,130 @@
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Page</title>
+
+   
+    <link rel="stylesheet" href="css/outlines.css" />
+    <link rel="stylesheet" href="css/sign.css" />
+    <link rel="shortcut icon" href="icons/favicon.svg" type="image/x-icon">
+    <style>
+     
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="icons/Whitevitelogo.svg" alt="" class="logo"
+      /></a>
+    </header>
+    <main>
+      <section>
+       
+        <p class="header">Register your account</p>
+
+          <span id="logStatus"></span>
+
+        <form action="signup.ph" class="cover">
+          <div class="form-control">
+            <label for="fullname">Full name</label>
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              value=""
+              required
+              placeholder="Enter your name"
+            />
+            <small>This is an error message</small>
+          </div>
+         
+          <div class="form-control">
+            <label for="email">Email adress</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value=""
+              required
+              placeholder="Enter your email address"
+            />
+            <small>This is an error message</small>
+          </div>
+
+          <div class="form-control">
+            <label for="username">User name</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              value=""
+              required
+              placeholder="Set a username"
+            />
+            <small>This is an error message</small>
+          </div>
+          <div class="form-control">
+            <label for="phone">Phone number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              value=""
+              required
+              placeholder="Enter your phone number"
+            />
+            <small>This is an error message</small>
+          </div>
+
+
+          <div class="form-control">
+            <label for="password">Create a password</label>
+            <!-- <div class="input-container"> -->
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value=""
+              required
+              placeholder="Enter a strong password"
+              autocomplete="off"
+            />
+            <img src="icons/show.png" alt="" id="show" />
+            <!-- </div> -->
+            <small>This is an error message</small>
+          </div>
+
+          <input type="submit" value="Proceed to upload" class="submit" />
+        </form>
+        <!-- <div class="line"></div> -->
+        <div class="long">
+          <p class="signin">
+            Already have an account? <a href="login.html"> Sign in</a>
+          </p>
+        </div>
+      
+      </section>
+    </main>
+
+     <script>
+    const showPass = document.getElementById("show");
+    const password = document.getElementById("password");
+
+    showPass.onclick = function () {
+      if (password.type === "password") {
+        showPass.src = "icons/hide_pass.png";
+        password.type = "text";
+      } else {
+        showPass.src = "icons/show.png";
+        password.type = "password";
+      }
+    };
+  </script>
+
+  </body>
+</html>

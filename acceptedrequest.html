@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/outlines.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/customer.css"/>
+  
+    <title>Request</title>
+    <link rel="shortcut icon" href="icons/favicon.svg" type="image/x-icon">
+    <style>
+      .cover1{
+        padding: 0;
+        overflow: hidden;
+      }
+      .eachDetail{
+        padding: 24px;
+      }
+      .eachDetail:hover{
+        background-color: #F9FBFE;
+      }
+    </style>
+  </head>
+ <body>
+    <div class="container">
+    
+  <!--  header path-->
+  <header>
+    <div class="notification">
+      <p>Requests</p>
+    </div>
+    <div class="profile">
+      <div>
+        <a href="#" class="notify"><img src="icons/Notifications.png" alt="notification"
+          id="notification" /></a>
+      </div>
+      <a href="#" class=""id="username" style="padding-left: 8px;">Landside technologies</a>
+     <div class="avatar">
+            <div id="profilePics"><img src="icons/avatar.png" alt="avatar" /></div>
+       
+      </div>
+    </div>
+  </header>
+  <!-- ASIDE PART -->
+  
+  <aside>
+    <div class="aside-content">
+      <a href="#">
+        <img src="icons/hamburger.svg" alt="toggle-menu" class="hide-desktop" id="menu-open" />
+      </a>
+      <div class="sidebar hide-mobile show-desktop">
+        <div>
+          <a href="#">
+            <img src="icons/hamburger.svg" alt="toggle-menu" class="exit hide-desktop" id="exit" />
+          </a>
+          <a href="index.html">
+            <img src="icons/logo.svg" class="logo" alt="" /></a>
+        </div>
+  
+        <!-- links/ dropdown content -->
+        <ul class="links">
+          <li class="activelink">
+            <a href="index.html" id="dashboard-btn" class="">
+              Requests</a>
+          </li>
+          <li>
+            <a href="profile.html" id="referral-btn" class="">Profile</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+      <!-- ASIDE PART -->
+
+      <!-- MAIN PART -->
+      <main>
+        <div class="topLinks">
+          <div onclick="goBack()" class="back_button">
+            <img src="icons/Back_button.png" alt="">
+          <p class="fs12 white">Back</p>
+          </div>
+        </div>
+            <form action="">
+
+              <div class="cover  cover1">
+                <div class="eachDetail">
+                <div class="orderDetails">
+                  <div class="flex">
+                      <img src="icons/Pickup_point.svg" alt="">
+                     <p class="fs12">No 12, Ajeigbe street kanayo close, FagbaLagos</p>
+                  </div>
+                  <div class="flex mt14">
+                      <img src="icons/drop_point.svg" alt="">
+                      <p class="fs12">No 5, Celestial close, church street, ebutemetta.</p>
+                  </div>
+              </div>
+              <div class="flex mt20">
+                <div class="stats">
+                  <p class="create status">create</p>
+                <div class="flex">
+                  <img src="icons/Timeline.png" alt="">
+                <p class="dark fs12">24th Mar, 2020 03:43pm</p>
+                </div>
+                </div>
+                <img src="icons/enter_page.png" alt="">
+              </div>
+              </div>
+              <div class="eachDetail">
+                <div class="orderDetails">
+                  <div class="flex">
+                      <img src="icons/Pickup_point.svg" alt="">
+                     <p class="fs12">No 12, Ajeigbe street kanayo close, FagbaLagos</p>
+                  </div>
+                  <div class="flex mt14">
+                      <img src="icons/drop_point.svg" alt="">
+                      <p class="fs12">No 5, Celestial close, church street, ebutemetta.</p>
+                  </div>
+              </div>
+              <div class="flex mt20">
+                <div class="stats">
+                  <p class="status accepted">Accepted</p>
+                <div class="flex">
+                  <img src="icons/Timeline.png" alt="">
+                <p class="dark fs12">24th Mar, 2020 03:43pm</p>
+                </div>
+                </div>
+                <img src="icons/enter_page.png" alt="">
+              </div>
+              </div>
+              <div class="eachDetail">
+                <div class="orderDetails mt24">
+                  <div class="flex">
+                      <img src="icons/Pickup_point.svg" alt="">
+                     <p class="fs12">No 12, Ajeigbe street kanayo close, FagbaLagos</p>
+                  </div>
+                  <div class="flex mt14">
+                      <img src="icons/drop_point.svg" alt="">
+                      <p class="fs12">No 5, Celestial close, church street, ebutemetta.</p>
+                  </div>
+              </div>
+              <div class="flex mt20">
+                <div class="stats">
+                  <p class="status continue">Continue to payment</p>
+                <div class="flex">
+                  <img src="icons/Timeline.png" alt="">
+                <p class="dark fs12">24th Mar, 2020 03:43pm</p>
+                </div>
+                </div>
+                <img src="icons/enter_page.png" alt="">
+              </div>
+              </div>
+            </div>
+
+            <div class="cover">
+              <div class="summaryTop">
+                  <p class="fs20 ">Request</p>
+                  <img src="icons/close_button.png" alt="" class="cancel">
+              </div>
+             
+              <div class="orderDetails mt24">
+                  <div class="flex">
+                      <img src="icons/Pickup_point.svg" alt="">
+                     <p class="fs12">No 12, Ajeigbe street kanayo close, FagbaLagos</p>
+                  </div>
+                  <div class="flex mt14">
+                      <img src="icons/drop_point.svg" alt="">
+                      <p class="fs12">No 5, Celestial close, church street, ebutemetta.</p>
+                  </div>
+              </div>
+              <p class="fs10 mt40">PARCEL DETAILS</p>
+              <div class="line mt12"></div>
+              <div class="summary mt24">
+                  <div class="flex mt24">
+                      <div>
+                          <p class="fs12">PARCEL TYPE</p>
+                          <p class="fs16">Envelope <span>(Fragile, Food item)</span> </p>
+                      </div>
+                      <div>
+                          <p class="fs12">COST</p>
+                          <p class="fs16">N80,000</p>
+                      </div>
+                  </div>
+                  <div class="flex mt24">
+                    <div>
+                        <p class="fs12">NUMBER OF PARCELS</p>
+                        <p class="fs16">2</p>
+                    </div>
+                    <div>
+                        <p class="fs12">DATE CREATED</p>
+                        <p class="fs16">24th Apr,2020  3:15pm</p>
+                    </div>
+                </div>
+                <div class="flex mt24">
+                  <div>
+                      <p class="fs12">DELIVERY DATE AND TIME</p>
+                      <p class="fs16">24th Mar,2020 03:45pm</p>
+                  </div>
+                  <div>
+                      <p class="fs12">STATUS</p>
+                      <p class="status  mt4 accepted">Accepted</p>
+                  </div>
+              </div>
+                  <div class="mt24">
+                      <p class="fs12">COMMENTS</p>
+                      <p class="fs16">Drop at No 4,Adebimpe str, ikeja.vsv</p>
+                  </div>
+              </div>
+               <div class="below">
+                <p class="fs10 mt40">RIDER DETAILS</p>
+                <div class="line mt12"></div>
+                
+                <div class="mt16 flex1">
+                  <img src="icons/Riders.png" alt="">
+                  <div>
+                    <p class="fs14">Riders</p>
+                    <p class="fs12 mt4">Landstroll Deliveries</p>
+                  </div>
+                </div>
+                <div class="mt16 flex1">
+                  <img src="icons/Phone_number.png" alt="">
+                  <div>
+                    <p class="fs14">RIDER’S NUMBER</p>
+                    <p class="fs12 mt4">08193991990</p>
+                  </div>
+                </div>
+                <div class="contact">
+                  <div class="chatUs">
+                    <div>
+                      <img src="icons/Chat_with_us.svg" alt="" class="chat">
+                      <p class="fs10 mt8">SEND MESSAGE</p>
+                    </div>
+                    <div>
+                      <img src="icons/location.svg" alt="" class="chat">
+                      <p class="fs10 mt8">SHOW RIDER LOCATION</p>
+                    </div>
+                  </div>
+                </div>
+               </div>
+              
+           </div>
+
+            </form>
+       
+
+      </main>
+      <!-- MAIN PART -->
+    </div>
+
+</div>
+
+
+
+
+    <script src="js/style.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+   
+  </body>
+</html>
+   

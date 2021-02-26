@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/outlines.css"/>
+    <link rel="stylesheet" href="css/customer.css"/>
+  
+    <title>Request</title>
+    <link rel="shortcut icon" href="icons/favicon.svg" type="image/x-icon">
+    <style>
+      /* .fs16{
+        color: #fff;
+      } */
+     
+    </style>
+  </head>
+ <body>
+    <div class="container">
+    
+  <!--  header path-->
+  <header>
+    <div class="notification">
+      <p>Requests</p>
+    </div>
+    <div class="profile">
+      <div>
+        <a href="#" class="notify"><img src="icons/Notifications.png" alt="notification"
+          id="notification" /></a>
+      </div>
+      <a href="#" class=""id="username" style="padding-left: 8px;">Landside technologies</a>
+     <div class="avatar">
+            <div id="profilePics"><img src="icons/avatar.png" alt="avatar" /></div>
+       
+      </div>
+    </div>
+  </header>
+  <!-- ASIDE PART -->
+  
+  <aside>
+    <div class="aside-content">
+      <a href="#">
+        <img src="icons/hamburger.svg" alt="toggle-menu" class="hide-desktop" id="menu-open" />
+      </a>
+      <div class="sidebar hide-mobile show-desktop">
+        <div>
+          <a href="#">
+            <img src="icons/hamburger.svg" alt="toggle-menu" class="exit hide-desktop" id="exit" />
+          </a>
+          <a href="index.html">
+            <img src="icons/logo.svg" class="logo" alt="" /></a>
+        </div>
+  
+        <!-- links/ dropdown content -->
+        <ul class="links">
+          <li class="activelink">
+            <a href="index.html" id="dashboard-btn" class="">
+              Requests</a>
+          </li>
+          <li>
+            <a href="profile.html" id="referral-btn" class="">Profile</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+      <!-- ASIDE PART -->
+
+      <!-- MAIN PART -->
+      <main>
+        <div class="topLinks">
+          <div onclick="goBack()" class="back_button">
+            <img src="icons/Back_button.png" alt="">
+          <p class="fs12 white">Back</p>
+          </div>
+        </div>
+        <div id="expressDelivery">
+            <div class="expressDelivery">
+                <div class="cover">
+                    <p class="fs20 dark mt8">Express delivery</p>
+                    <p class="fs16 mt8">Your express delivery will attract 
+                        extra charges, Do you want to proceed.</p>
+                        <button class="mt24" id="proceed">Proceed</button>
+                        <p class="fs16 mt8" style="color: #0370D5;" id="close">Cancel</p>
+                </div>
+            </div>
+          </div>
+            <form action="">
+        <div class="cover">
+            <p class="fs20 createRequest">Create request</p>
+
+            <div class="drop">
+                <img src="icons/Pickup_point.svg" alt="">
+                <input type="text" placeholder="Choose pickup location">
+            </div>
+            <div class="drop">
+                <img src="icons/drop_point.svg" alt="">
+                <input type="text" placeholder="Enter delivery location">
+            </div>
+            <div id="parcelOption">
+      
+<div class="selectInput">
+    <label for="name">Select parcel type</label>
+<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+<div class="custom-select" >
+    <select disabled>
+    <option value="">Select option</option>
+    <option value="Envelope">Envelope</option>
+    <option value="Boxer">Box</option>
+    </select>
+    </div>
+</div>
+<div class="checker">
+    <label class="checkbox">Food item
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <label class="checkbox" >Fragile
+        <input type="checkbox">
+        <span class="checkmark" ></span>
+      </label>
+</div>
+
+<div class="textInput">
+    <label for="name">How many parcels</label>
+<input type="text" name="name" id="name" value="" placeholder="Number of parcels">
+</div>
+<div class="addButton mt8">
+    <img src="icons/Add_request.png" alt="" id="addParcel">
+    <p class="fs14">Add a new parcel</p>
+    </div>
+          </div>
+          <div class="detail mt24">
+              <div>
+                  <p class="fs16" id="typeOfParcel">Envelope </p><span class="numberOfParcel">(2 parcels)</span>
+              </div>
+              <img src="icons/close_button.png" alt="" class="cancel">
+          </div>
+        </div>
+        <div class="cover">
+            <p class="fs16 dark">Add comments</p>
+            <div class="addButton mt8" id="addComment">
+                <img src="icons/Add_request.png" alt="">
+                <p class="fs14">Add comments</p>
+                </div>
+                <div class="comment">
+                    <textarea id="comment" name="comment" rows="10" cols="30" placeholder="comments" class="mt8 fs16"></textarea>
+                </div>
+                <div class="mt24">
+                    <label class="checkbox">This is an urgent delivery
+                        <input type="checkbox" id="expressOption">
+                        <span class="urgent checkmark"></span>
+                      </label>
+                </div>
+                <div class="selectDateTime">
+                <div class="textInput mt12">
+                    <label for="deliveryDate">Select delivery date</label>
+                <input type="date" name="deliveryDate" id="deliveryDate" value="" placeholder="Select delivery date">
+                </div>
+                <div class="textInput mt24">
+                    <label for="deliveryTimedeliveryDate">Select time</label>
+                <input type="time" name="deliveryTime" id="deliveryTime" value="" placeholder="Select time">
+                </div>
+              </div>
+                <button class="mt40">Continue to Summary</button>
+          </div>
+    </form>
+
+      </main>
+      <!-- MAIN PART -->
+    </div>
+
+</div>
+
+
+
+
+    <script src="js/style.js"></script>
+    <script src="js/outlines.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+   <script>
+
+
+
+    //  EXPRESS DELIVERY OPTION
+
+    var expressOption = document.getElementById('expressOption');
+    var expressDelivery = document.getElementById('expressDelivery');
+    var closeOption = document.getElementById('close'); // 
+    var proceedButton = document.getElementById('proceed'); // 
+     var selectDateTime = document.querySelector('.selectDateTime');
+     selectDateTime.style.display = "none" // DIV FOR THE EXPRESS DELIVERY DATE AND TIME 
+
+  
+    expressOption.onclick = function(){
+      expressDelivery.style.display = "block"
+      document.querySelector(".urgent").style.backgroundColor = "#0370D5";
+      if (selectDateTime.style.display === "block"){
+        selectDateTime.style.display = "none";
+        expressDelivery.style.display = "none";  
+        document.querySelector(".urgent").style.backgroundColor = "#ffff";
+    }
+    }
+    proceedButton.onclick = function(){
+      selectDateTime.style.display = "block"
+      expressDelivery.style.display = "none"
+    }
+
+       // ONCE CANCEL OPTION I SELECTED FOR THE EXPREE DELIVERY
+       closeOption.onclick = function(){
+      document.querySelector(".urgent").style.backgroundColor ="#fff";
+      expressDelivery.style.display = "none";
+      selectDateTime.style.display = "none";
+     }
+
+    // duplicateEntryTest();
+
+    
+// var parcelType = document.querySelectorAll('.select-selected'); // PARCEL TYPE
+
+// let parcelType_arr = Array.prototype.slice.call(parcelType);
+// parcelType_arr[con].textContent;
+
+
+// let sumDetail = document.querySelectorAll('.detail');   // EACH TRANSACTION
+//                  let sumDetail_arr = Array.prototype.slice.call(sumDetail);
+//                  sumDetail_arr.forEach(function(val){
+                     
+//                    });  
+    
+   </script>
+  </body>
+</html>
+   

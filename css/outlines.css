@@ -1,0 +1,641 @@
+/* TEXT INPUT STYLING */
+*{
+    box-sizing: border-box;
+}
+input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+   }
+   input[type=date]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+   }
+.textInput, .selectInput{
+    margin: 0 0 24px;
+ }
+
+ #save{
+   width: 100%;
+ }
+ .cover .selectInput{
+    margin: 24px 0;
+ }
+.flex, .stats, .flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex1{
+    justify-content: start;
+}
+.flex1 img{
+    padding-right: 16px;
+}
+ .closeBtn{
+     cursor: pointer;
+     position: absolute;
+     top: 20px;
+     right: 20px;
+ }
+ #close{
+     cursor: pointer;
+ }
+ .create{
+    color: #A21585;
+    background: #FFF9FE;
+ }
+ .accepted{
+    color: #5635EF;
+    background: #F3F1FF;
+ }
+ .continue{
+    border: 0.5px solid #CED9E8;
+    color: #0370D5;
+ }
+ textarea{
+    background: #FFFFFF;
+    border: 0.5px solid #43495C;
+    box-shadow: 1px 1px 2px rgba(107, 111, 125, 0.18), -1px -1px 2px rgba(107, 111, 125, 0.18);
+    border-radius: 8px;
+    padding: 11px 16px;
+    color: #0D152E;
+    width: 100%;
+    max-width: 474px;
+    height: 102px;
+    max-height: fit-content;
+ }
+ textarea::placeholder{
+    color: #C5C9D5
+ }
+/* TEXT SIZES... P AND TEXT STYLING.............................................*/
+ .text{
+    margin: 0 auto;
+    text-align: center;
+}
+P{
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+color: #0D101A;
+}
+.dark{
+    color: #0D101A;
+}.white{
+    color: #fff;
+}
+.darker{
+   color: #43495C;
+}
+.blue{
+    color: #0370D5;
+}
+
+.fs10,.fs10m, .fs10b,.fs10bb{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 12px;
+}
+.fs12,.fs12m, .fs12b, .fs12bb{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 17px;
+}
+.fs14,.fs14m, .fs14b, .fs14bb{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 19px;
+}
+.fs16, .new_request,.fs16m, .fs16b, .fs16bb{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+}
+.fs20,.fs20m, .fs20b, .fs20bb{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 29px;
+}
+
+.fs10m, .fs12m, .fs14m, .fs16m, .fs20m{
+    font-weight: 500;
+}
+.fs10b, .fs12b, .fs14b, .fs16b, .fs20b{
+    font-weight: 600;
+}
+.fs10bb, .fs12bb, .fs14bb, .fs16bb, .fs20bb{
+    font-weight: 700;
+}
+.center{
+    text-align: center;
+}
+
+/* TEXT SIZES.............................................*/
+ 
+
+
+.back_button{
+    width: 77px;
+    height: 36px;
+    background: #282F45;
+border-radius: 24px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.back_button img{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+ /* BORDER CALLL ............................................*/
+
+ .line{
+    border-bottom: 0.5px solid #CED9E8;
+    width: 100%;
+    max-width: 538px;
+    margin: 32px auto 24px;
+ }
+ .sec, .save{
+    border: 0.5px solid #CED9E8;
+    color: #1D2029;
+    padding: 9px 16px;
+    width: 175px;
+    margin-top: 32px;
+ }
+ .save{
+     width: 100%;
+     max-width: 474px;
+     box-shadow: none;
+ }
+ .register{
+     text-align: center;
+    border: 0.5px solid #CED9E8;
+    color: #0370D5;
+ }
+
+ input, .custom-select {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #C5C9D5;
+    padding: 11px 16px;
+    background: #FFFFFF;
+    border: 0.5px solid #43495C;
+    box-shadow: 1px 1px 2px rgba(107, 111, 125, 0.18), -1px -1px 2px rgba(107, 111, 125, 0.18);
+    border-radius: 8px;
+    margin-top: 8px;
+    height: 44px;
+    width: 100%;
+    max-width: 474px;
+    box-sizing: border-box;
+ }
+ label{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    display: block;
+    padding-bottom: 8px;
+    color: #282F45;
+ }
+ .wrong{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #F12A2C;
+    /* border: 0.5px solid #F12A2C; */
+    margin: 8px 0 0;
+      }
+input[disabled]{
+    background: #F2F9FF;
+      }
+input::placeholder, .custom-select ::placeholder{
+    color: #C5C9D5;
+   }
+   input:hover, .custom-select :hover{
+    border:  0.5px solid #43495C;
+   }
+   input::after, .custom-select::after{
+       border: 1px solid #0370D5;
+       box-shadow: none;
+   }
+
+   
+   /* REQUEST DETAIL POP UP ON CLICK */
+   #requestDetail{
+        z-index: 10;
+        position: absolute;
+        background-color: #fff;
+        top: 60px;
+
+      } 
+
+   /* DROPDOWN SELECTION STYLE............................................ */
+
+   .custom-select {
+    position: relative;
+    font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0;
+  height: 44px;
+  max-width: 4748px;
+   border-radius: 8px;
+   margin-top: 0;
+  }
+  
+  .custom-select select {
+    display: none; 
+    /* hide original SELECT element:*/
+   }
+   
+   .custom-select.wrong{
+    color: #DE350B;
+    border: 1px solid #DE350B;
+    box-shadow: 1px 1px 2px rgba(107, 111, 125, 0.18), -1px -1px 2px rgba(107, 111, 125, 0.18);
+   }
+   .wrong .select-selected{
+    color: #DE350B;
+   }
+   .select-selected, form select {
+    /* border-color: rgba(0, 0, 0, 0.1); */
+     border-radius: 8px;
+     color: #0D152E;
+      
+ }
+ 
+ /*style the arrow inside the select element:............................................*/
+ .select-selected:after, form select:after {
+   position: absolute;
+   content: "";
+   top: 19px;
+   right: 17px;
+   width: 0;
+   height: 0;
+   border: 6px solid transparent;
+   border-color: #C5C9D5 transparent transparent transparent;
+ }
+ 
+ /*point the arrow upwards when the select box is open (active):............................................*/
+ .select-selected.select-arrow-active:after {
+   border-color: transparent transparent  #43495C transparent;
+   top: 10px;
+ }
+ 
+ /*style the items (options), including the selected item:............................................*/
+ .select-items div,.select-selected {
+   padding: 8px 16px;
+   border: 1px solid transparent;
+   /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+   /* box-shadow: 1px 1px 2px rgba(107, 111, 125, 0.18), -1px -1px 2px rgba(107, 111, 125, 0.18); */
+   cursor: pointer;
+   user-select: none;
+   font-family: Inter;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 16px;
+ line-height: 22px;
+ height: 44px;
+ }
+ 
+ .select-items div, .same-as-selected {
+     color: #0D152E;
+ }
+ /*style items (options):............................................*/
+ .select-items {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   right: 0;
+   border: solid 1px rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   z-index: 99; 
+   background: #fff;
+   margin-top: 8px;
+   overflow: hidden;
+ }
+
+ .select-items:hover{
+    border: solid 1px #EDF2F7;
+ }
+ 
+ /*hide the items when the select box is closed:............................................*/
+ .select-hide {
+   display: none;
+ }
+ 
+ .select-items div:hover, .same-as-selected {
+    background: #F9FBFE;
+    border:none ;
+    border-top:0.5px solid #F9FBFE; ;
+    border-bottom:0.5px solid #F9FBFE; ;
+ }
+
+ /* content cover css ............................................*/
+
+ .cover{
+     padding:24px 16px;
+     border-radius: 24px;
+     border: 0.5px solid #CED9E8;
+     margin-left: 16px;
+     margin-right: 16px;
+     max-width: 538px;
+     height: max-content;
+ }
+/* DROP LOCATIONS ..................................................*/
+
+.drop{
+    background: #FFFFFF;
+border: 0.5px solid #828282;
+box-shadow: 1px 1px 2px rgba(107, 111, 125, 0.18), -1px -1px 2px rgba(107, 111, 125, 0.18);
+border-radius: 8px;
+width: 100%;
+max-width: 474px;
+margin: 0 16px 24px 0;
+display: flex;
+align-items: center;
+padding-left:16px;
+padding-right:16px;
+height: 44px;
+}
+.drop input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    padding-left: 8px;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+}
+ .textInput input{
+    padding: 0;
+    padding-left: 16px;
+    margin: 0;
+    width: 100%;
+    max-width: 474px;
+    /* margin: 8px 0; */
+}
+ .textInput{
+    margin: 0 ;
+}
+
+ /* Buttons ............................................*/
+
+ .connect{
+    width: 100%;
+    max-width: 474px;
+    padding-top: 11px;
+    display: block;
+    padding-bottom: 11px;
+ }
+
+ button,  li > button:hover, li.activelink, li, .make_request, .connect, li > .connect:hover{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #DCEDFE;
+    background: #0370D5;
+    border-radius: 8px;
+    margin: 0 16px 16px;
+    /* width: 100%; */
+    max-width: 474px;
+    height: 44px;
+    border: none;
+ }
+
+ button, .make_request, .connect{
+    width: 100%;
+    margin: 0 0 16px;
+ }
+.links li.activelink,.links li.activelink:hover{
+    text-align: left;
+    /* color: #DCEDFE; */
+    background-color: #0370D5;
+ }
+ .links li:hover{
+    background-color: #EDF2F7;
+ }
+ .links li{
+     background: none;
+ }
+ button[disabled]{
+    background: #7DC0FF;
+ }
+
+ li > button, li > .connect{
+     background: none;
+     color: #828282;
+     border: none;
+ }
+ li.activelink{
+     color: #fff
+ }
+
+ /* CHECKBOX CSS ............................................*/
+
+ .checkbox {
+    position: relative;
+    padding-left: 35px;
+    padding-top: 2px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+margin-right: 32px;
+line-height: 22px;
+color: #0D101A;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  label.checkbox{
+    display: inline;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    height: 24px;
+    /* width: 0; */
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+    background: #FFFFFF;
+border: 0.5px solid #43495C;
+box-sizing: border-box;
+box-shadow: 1px 1px 2px rgba(107, 111, 125, 0.18), -1px -1px 2px rgba(107, 111, 125, 0.18);
+border-radius: 8px;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox input:checked ~ .checkmark {
+    background-color: #0370D5;
+  }
+  
+   /* When the checkbox is disabled, add a blue background */
+   .checkbox input[disabled] ~ .checkmark {
+    background-color: #F2F9FF;
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after, .checkbox input[disabled] .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox input:checked ~ .checkmark:after, .checkbox input[disabled] ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox .checkmark:after, .checkbox input[disabled] .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  form{
+    margin: 0;
+}
+/* form div{
+    margin-top: 28px ;
+} */
+form .cover {
+    margin-top: 24px;
+}
+.cover .createRequest, .checker{
+    margin-bottom: 24px;
+    margin-top: -8px;
+}
+.addButton{
+    margin-top: 0;
+    display: flex;
+}
+.addButton .fs14{
+    padding-left: 8px;
+}
+.addButton img{
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+ .chatUs{
+     display: flex;
+     width: 241px;
+     margin: 16px auto 0;
+     text-align: center;
+     justify-content: space-between;
+ }
+/* PADDING AND MARGIN... P AND TEXT STYLING.............................................*/
+
+
+.mt4{
+    margin-top: 4px;
+}
+.mt8{
+    margin-top: 8px;
+}
+.mt12{
+    margin-top: 12px;
+}
+.mt14{
+    margin-top: 14px;
+}
+.mt16{
+    margin-top: 16px;
+}
+.mt24{
+    margin-top: 24px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt40{
+    margin-top: 40px;
+}
+
+@media only screen  and (min-width: 538px){
+
+   
+    .cover{
+        padding:24px 32px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 538px;
+    }
+}
+
+@media only screen  and (min-width: 750px){
+    .fs20, .new_request{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 29px;
+    }
+    /* .back_button{
+        margin-left: 16px;
+} */
+}
+@media only screen  and (min-width: 1024px){
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+    margin: 28px 32px;
+}
+
+form .cover{
+    margin-top: 0;
+}
+#requestDetail{
+    z-index: 10;
+    position: relative;
+    background-color: #fff;
+    top: 0;
+    
+  } 
+}

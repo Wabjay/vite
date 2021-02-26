@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Verify Login</title>
+   
+    <link rel="stylesheet" href="css/outlines.css" />
+    <link rel="stylesheet" href="css/sign.css" />
+    <link rel="shortcut icon" href="icons/favicon.svg" type="image/x-icon">
+    <style>
+        main{
+            padding-top: 46px;
+        }
+      input{
+          margin-top: 40px;
+      }
+      p.header{
+          text-align: left;
+      }
+      .text{
+          margin-top: 8px;
+          margin-bottom: 40px;
+          text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="icons/Whitevitelogo.svg" alt="" class="logo"
+      /></a>
+      <!-- <img src="images/logo" alt=" Logo" class="logo" /> -->
+<!--
+      <p>
+        Register your account today <br />
+        <span class="green">it's fast and easy</span>
+      </p>-->
+    </header>
+    <main>
+      <section>
+        <p class="header">Verify your account</p>
+        <form action="" id="form" autocomplete="on" method="post" class="cover">
+         
+            <p class="header">Welcome to vite</p>
+            <p class="text">Start sending your packages today</p>
+                <div id="code">
+                    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+            </div>
+          </div>
+          <input type="submit" value="Confirm code" class="submit"/>
+          <div class="line"></div>
+          <p class="second">If you don’t receive the code in 30 seconds, tap resend
+            code below </p>
+            <div class="center">
+                <input type="submit"  class="sec" value="Resend code in 30" />
+            </div>
+           
+        </form>
+        
+      </section>
+    </main>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outlines</title>
+    <link rel="stylesheet" href="css/outlines.css">
+    <link rel="shortcut icon" href="icons/favicon.svg" type="image/x-icon">
+
+
+    <style>
+        #code {
+      max-width: 240px;
+      margin: 25px auto 0;
+        }
+     #code input {
+       
+        width: 20%;
+        transition: all .2s ease-in-out;
+        border-radius: 3px;
+      }
+        #code input:focus {
+          border-color: purple;
+          box-shadow: 0 0 5px purple inset;
+        }
+        
+       #code input::selection {
+          background: transparent;
+        }
+      
+    </style>
+</head>
+<body>
+
+    <!-- disable input -->
+    <div class="textInput">
+        <label for="name">Input field/Normal Disabled</label>
+<input type="text" disabled name="name" id="name" value="Input field" placeholder="">
+<p class="wrong">You entered a wrong email</p>
+   </div>
+
+   <div class="drop">
+       <img src="icons/Pickup_point.svg" alt="">
+       <input type="text" placeholder="Choose pickup location">
+   </div>
+
+   <!-- INPUT TYPE TEXT -->
+   <div class="textInput">
+    <label for="name">Input field/Normal</label>
+<input type="text" name="name" id="name" value="" placeholder="Input field">
+<p class="wrong">You entered a wrong email</p>
+</div>
+    
+
+<!-- DROPDOWN MENUS -->
+
+<div class="selectInput">
+    <label for="name">Input field dropdown/Normal</label>
+<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+<div class="custom-select" >
+    <select disabled>
+    <option value="0">Select option</option>
+    <option value="1">Bitcoin</option>
+    <option value="2">Bitcoin</option>
+    <option value="3">Bitcoin</option>
+    <option value="4">Bitcoin</option>
+    <option value="5">Bitcoin</option>
+    <option value="6">Bitcoin</option>
+    <option value="7">Bitcoin</option>
+    <option value="8">Bitcoin</option>
+    <option value="9">Bitcoin</option>
+    <option value="10">Bitcoin</option>
+    </select>
+    </div>
+</div>
+    <div class="selectInput">
+    <label for="name">Input field dropdown/Error</label>
+<div class="custom-select wrong" >
+<select disabled>
+<option value="0">Select option</option>
+<option value="1">Bitcoin</option>
+<option value="2">Bitcoin</option>
+<option value="3">Bitcoin</option>
+<option value="4">Bitcoin</option>
+<option value="5">Bitcoin</option>
+<option value="6">Bitcoin</option>
+<option value="7">Bitcoin</option>
+<option value="8">Bitcoin</option>
+<option value="9">Bitcoin</option>
+<option value="10">Bitcoin</option>
+</select>
+</div>
+</div>
+
+<!-- copy for content cover -->
+<div class="cover">
+
+</div>
+
+
+<!-- Buttons -->
+
+<button>login to your account</button>
+    <button disabled>locked to your account</button>
+
+
+                    <img src="icons/close_button.png" alt="" class="closeBtn">
+    <li>
+        <button active>login to your account</button>
+        <button>login to your account</button>
+
+
+        
+
+
+
+        <button>login to your account</button>
+    </li>
+    <a href="#" class="connect">login button</a>
+
+    <!-- CHECKBOXES -->
+    <label class="checkbox">This is a checkbox
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      <label class="checkbox">This is a checkbox
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+<label class="checkbox blocked">This is a checkbox
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+<label class="checkbox blocked" >This is a disabled
+  <input type="checkbox" disabled>
+  <span class="checkmark" ></span>
+</label>
+
+
+<div id="code">
+    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+  </div>
+
+
+  <!-- FLEX PARCEL DETAILS -->
+  <div class="detail mt24">
+    <div>
+        <p class="fs16" id="typeOfParcel">Envelope <span class="numberOfParcel">(2 parcels)</span></p>
+    </div>
+    <img src="icons/close_button.png" alt="" class="cancel">
+</div>
+<!-- -------------------------------------- -->
+<script src="js/outlines.js"></script>
+<script>
+    var inputs = document.getElementsByTagName('input');
+    inputs.onclick = function(){
+        inputs.style.borderColor = '#0370D5';
+    }
+
+
+  
+    var myFunction = function(){
+        'usestrict';
+    var code = document.getElementById('code');
+    function goToNextInput(e){
+     var key = e.which;
+     t = (e.target);
+     sib = t.next('input');
+     if(key != 9 && (key < 48 || key > 57))
+     {
+         e.preventDefault();
+         return false;
+        }
+        if(key===9){
+            return true;
+        }
+        if(!sib || !sib.length){
+            sib = code;
+            find('input').eq(0);
+        }
+        sib.select().focus();
+    }
+    function onKeyDown(e){
+        var key = e.which;
+        if(key === 9 || (key >= 48 && key <= 57)){
+            return true;
+        }
+        e.preventDefault();
+        return false;
+    }
+    function onFocus(e){
+        (e.target).select();
+    }
+    code.onkeyup('input',goToNextInput);
+    code.onkeydown('input',onKeyDown);
+    code.onclick('input',onFocus);
+}
+myFunction();
+</script></body>

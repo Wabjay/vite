@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/outlines.css"/>
+    <link rel="stylesheet" href="css/customer.css"/>
+  
+    <title>Profile</title>
+    <link rel="shortcut icon" href="icons/favicon.svg" type="image/x-icon">
+    <style>
+      form{
+          display: block;
+          margin-top: 0;
+      }
+      .medium{
+          font-weight: 500;
+      }
+      .line{
+          margin: 16px auto;
+      }
+      a .line{
+        margin: 0 auto;
+      }
+      a > .flex{
+          padding: 16px 0;
+      }
+      a > .flex:hover{
+        background: #F9FBFE
+      }
+      .fs14{
+        color: #43495C;
+      }
+      .stats .dark{
+          padding-left: 20px;
+      }
+      .save{
+          margin-top: 16px;
+      }
+       .editprofile a.fs10{
+       font-weight: normal;
+     }
+    </style>
+  </head>
+ <body>
+    <div class="container">
+    
+  <!--  header path-->
+  <header>
+    <div class="notification">
+      <p>Profile</p>
+    </div>
+    <div class="profile">
+      <div>
+        <a href="#" class="notify"><img src="icons/Notifications.png" alt="notification"
+          id="notification" /></a>
+      </div>
+      <a href="#" class=""id="username" style="padding-left: 8px;">Landside technologies</a>
+     <div class="avatar">
+            <div id="profilePics"><img src="icons/avatar.png" alt="avatar" /></div>
+       
+      </div>
+    </div>
+  </header>
+  <!-- ASIDE PART -->
+  
+  <aside>
+    <div class="aside-content">
+      <a href="#">
+        <img src="icons/hamburger.svg" alt="toggle-menu" class="hide-desktop" id="menu-open" />
+      </a>
+      <div class="sidebar hide-mobile show-desktop">
+        <div>
+          <a href="#">
+            <img src="icons/hamburger.svg" alt="toggle-menu" class="exit hide-desktop" id="exit" />
+          </a>
+          <a href="index.html">
+            <img src="icons/logo.svg" class="logo" alt="" /></a>
+        </div>
+  
+        <!-- links/ dropdown content -->
+        <ul class="links">
+          <li>
+            <a href="index.html" id="dashboard-btn" class="">
+              Requests</a>
+          </li>
+          <li class="activelink">
+            <a href="profile.html" id="referral-btn" class="">Profile</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+      <!-- ASIDE PART -->
+
+      <!-- MAIN PART -->
+      <main>
+          
+            <form action="">
+        <div class="cover">
+            <div class="editprofile">
+               <img src="icons/profile_img.png" alt="">
+               <a href="#" class="fs10">Tap to change picture</a>
+               <a href="editprofile.html" class="edit">Edit profile</a>
+            </div>
+            
+            
+            <div class="mt24">
+                <div class="line"></div>
+                <div class="flex">
+                        <p class="fs14">Full name</p>
+                        <p class="fs14m">Turaka James</p>
+                </div>
+                <div class="line"></div>
+                <div class="flex">
+                        <p class="fs14">Username</p>
+                        <p class="fs14m">@Tangeriane</p>
+                </div>
+                <div class="line"></div>
+                <div class="flex">
+                        <p class="fs14">Email address</p>
+                        <p class="fs14m">Turaka232jfj@gmail.com</p>
+                </div>
+                <div class="line"></div>
+                <div class="flex">
+                        <p class="fs14">Phone number</p>
+                        <p class="fs14m">09084774311</p>
+                </div>
+                <div class="line"></div>
+                <p class="fs10m" style="margin-top: 32px;">ACTIONS</p>
+                <div class="line" style="margin-top: 12px; margin-bottom: 0"></div>
+                <a href="changepassword.html"><div class="flex">
+                    <div class="flex stats">
+                      <img src="icons/Password.png" alt="">
+                    <p class="dark fs16">Change password</p>
+                    </div>
+                    <img src="icons/enter_page.png" alt="">
+                  </div>
+                  <div class="line"></div>
+                </a>
+                  <a href="#"><div class="flex">
+                      <div class="flex stats">
+                        <img src="icons/Chat_with_us.png" alt="">
+                      <p class="dark fs16">Chat with us</p>
+                      </div>
+                      <img src="icons/enter_page.png" alt="">
+                    </div>
+                    <div class="line"></div>
+                </a>
+                  
+            <div class="center mt24">
+    <input type="submit"  class="save" style="color: #F12A2C; border: 0.5px solid #F12A2C" value="Logout" />
+            </div>
+         </div>
+    </form>
+       
+ 
+
+      </main>
+      <!-- MAIN PART -->
+    </div>
+
+</div>
+
+
+
+
+    <script src="js/style.js"></script>
+    <script src="js/outlines.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+   
+  </body>
+</html>
+   

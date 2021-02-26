@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+   
+    <link rel="stylesheet" href="css/outlines.css" />
+    <link rel="stylesheet" href="css/sign.css" />
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="icons/Whitevitelogo.svg" alt="" class="logo"
+      /></a>
+     
+    </header>
+    <main>
+      <section>
+        <p class="header">Login</p>
+        <form action="" class="cover">
+         
+
+          <div class="form-control">
+            <label for="username">Enter Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              value=""
+              placeholder="Enter your email address"
+              required
+            /><small>This is an error message</small>
+          </div>
+
+          <div class="form-control">
+            <label for="password">Enter Password</label>
+            <div class="input-container">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                value=""
+                placeholder="Enter your password"
+                required
+                autocomplete="off"
+              />
+              <img src="icons/show.png" alt="" id="show" />
+            </div>
+            <div class="forget"><a href="forgetpass.html">Forget password</a></div>
+          </div>
+
+          <input type="submit" value="Login" class="submit" />
+        </form>
+        <div class="long">
+          <p class="signin">
+            New to vite ? <a href="signup.html">Create an account</a>
+          </p>
+        </div>
+        
+      </section>
+    </main>
+    
+     <script>
+    const showPass = document.getElementById("show");
+    const password = document.getElementById("password");
+
+    showPass.onclick = function () {
+      if (password.type === "password") {
+        showPass.src = "icons/hide_pass.png";
+        password.type = "text";
+      } else {
+        showPass.src = "icons/show.png";
+        password.type = "password";
+      }
+    };
+  </script>
+  </body>
+</html>

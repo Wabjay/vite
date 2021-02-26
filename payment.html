@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/outlines.css"/>
+    <link rel="stylesheet" href="css/customer.css"/>
+  
+    <title>Payment</title>
+    <link rel="shortcut icon" href="icons/favicon.svg" type="image/x-icon">
+    <style>
+    
+    </style>
+  </head>
+ <body>
+    <div class="container">
+    
+  <!--  header path-->
+  <header>
+    <div class="notification">
+      <p>Requests</p>
+    </div>
+    <div class="profile">
+      <div>
+        <a href="#" class="notify"><img src="icons/Notifications.png" alt="notification"
+          id="notification" /></a>
+      </div>
+      <a href="#" class=""id="username" style="padding-left: 8px;">Landside technologies</a>
+     <div class="avatar">
+            <div id="profilePics"><img src="icons/avatar.png" alt="avatar" /></div>
+       
+      </div>
+    </div>
+  </header>
+  <!-- ASIDE PART -->
+  
+  <aside>
+    <div class="aside-content">
+      <a href="#">
+        <img src="icons/hamburger.svg" alt="toggle-menu" class="hide-desktop" id="menu-open" />
+      </a>
+      <div class="sidebar hide-mobile show-desktop">
+        <div>
+          <a href="#">
+            <img src="icons/hamburger.svg" alt="toggle-menu" class="exit hide-desktop" id="exit" />
+          </a>
+          <a href="index.html">
+            <img src="icons/logo.svg" class="logo" alt="" /></a>
+        </div>
+  
+        <!-- links/ dropdown content -->
+        <ul class="links">
+          <li class="activelink">
+            <a href="index.html" id="dashboard-btn" class="">
+              Requests</a>
+          </li>
+          <li>
+            <a href="profile.html" id="referral-btn" class="">Profile</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+      <!-- ASIDE PART -->
+
+      <!-- MAIN PART -->
+      <main>
+        <div class="topLinks">
+          <div onclick="goBack()" class="back_button">
+            <img src="icons/Back_button.png" alt="">
+          <p class="fs12 white">Back</p>
+          </div>
+        </div>
+            <div id="congrats">
+                <div class="cover">
+                    <img src="icons/congrats.svg" alt="">
+                    <p class="fs20 white mt8">Congratulatuions</p>
+                    <p class="fs16 white mt8" >Your delivery request has been successfully created. We will notify you when your request has been accepted by a courier</p>
+                    <div class="edit">
+                        <p class="fs14 white">You will not be charged until your request is accepted</p>   
+                    </div>
+                   
+                    <button class="mt24 blue" id="close">Back to requests</button>
+                       
+                </div>
+            </div>
+            <form action="">
+        <div class="cover">
+            <p class="fs16">Enter recipient contact information</p>
+            <div class="textInput mt24">
+                <label for="name">Recipient name</label>
+            <input type="text" name="name" id="recieptName" value="" placeholder="Name">
+                </div>
+                <div class="textInput mt24">
+                    <label for="name">Receiver’s number</label>
+                <input type="number" name="name" id="phoneNumber" value="" placeholder="Phone number">
+                    </div>
+        </div>
+        <div class="cover">
+            <p class="fs20 dark">Enter card details</p>
+           
+                <div class="textInput mt24">
+                    <label for="cardNumber">Card number</label>
+                <input type="number" name="cardNumber" id="cardNumber" value="" placeholder="0094 044492 0220203">
+                </div>
+                
+                <div class="flex">
+                    <div class="textInput mt24" style="margin-right: 10px;">
+                        <label for="cardNumber">Expiry date</label>
+                    <input type="number" name="cardNumber" id="cardNumber" value="" placeholder="MM/YY">
+                    </div>
+                    <div class="textInput mt24" style="margin-left: 10px;">
+                        <label for="cardNumber">CVV</label>
+                    <input type="number" name="cardNumber" id="cardNumber" value="" placeholder="CVV">
+                    </div>
+                </div>
+                <div class="detail mt24">
+                    <p class="fs16" >Amount to pay</p>
+                    <p class="fs16 blue">N80,000</p>
+                  </div>
+                <a href="#" id="payment" class="connect mt40">Pay now</a>
+          </div>
+    </form>
+
+      </main>
+      <!-- MAIN PART -->
+    </div>
+
+</div>
+
+
+
+
+    <script src="js/style.js"></script>
+    <script src="js/outlines.js"></script>
+   <script>
+     var congrats = document.getElementById('congrats');
+     var payment = document.getElementById('payment');
+    //  var close = document.getElementById('close');
+
+     payment.onclick = function(){
+       congrats.style.display = 'block';
+     }
+    //  close.onclick = function(){
+    //    congrats.style.display = 'none';
+    //  }
+
+
+   </script>
+  </body>
+</html>
+   
