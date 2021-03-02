@@ -133,7 +133,7 @@ let sumDetail = document.querySelectorAll('.detail');   // EACH TRANSACTION
         //INDEX TRANSACTION LIST TO VIEW DETAILS OF EACH REQUEST BASED ON THE STATUS
         function transactionList(){
 // DIV FOR ADD PARCEL BOX
-      
+      //STATUS LIST ARE "created, accepted, continue to payment"
 let eachDetail = '<div class="eachDetail">'+
 '<div class="orderDetails">'+
     '<div class="flex">'+' <img src="icons/Pickup_point.svg" alt="">'+
@@ -145,7 +145,7 @@ let eachDetail = '<div class="eachDetail">'+
 '</div>'+
 '<div class="flex mt20">'+
     '<div class="stats">'+
-        '<p class="status">continue to payment</p>'+
+        '<p class="status">accepted</p>'+
         '<div class="flex">'+'<img src="icons/Timeline.png" alt="">'+
             '<p class="dark fs12m">24th Mar, 2020 03:43pm</p>'+
         '</div>'+
@@ -204,9 +204,9 @@ requestDetail.style.display = "none";
 let status = document.querySelectorAll('.status');
 let status_array = Array.prototype.slice.call(status);
 status_array.forEach(function(stats){
-if(stats.textContent == 'create'){
+if(stats.textContent == 'created'){
 stats.classList.add("create");
-document.getElementById('status').innerHTML = "create"
+document.getElementById('status').innerHTML = "created"
 } else if(stats.textContent == 'accepted'){
 stats.classList.add("accepted");
 document.getElementById('below').style.display = 'block';

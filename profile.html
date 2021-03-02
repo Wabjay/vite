@@ -44,6 +44,20 @@
        .editprofile a.fs10{
        font-weight: normal;
      }
+     .tapInput{
+       /* visibility: hidden; */
+       opacity: 0;
+       position: absolute;
+       margin: auto;
+       left: 0;
+       width: 100%;
+       width: 100%;
+    height: 100%;
+    outline: none;
+     }
+     .tap{
+      color: #747989;
+     }
     </style>
   </head>
  <body>
@@ -56,7 +70,7 @@
     </div>
     <div class="profile">
       <div>
-        <a href="#" class="notify"><img src="icons/Notifications.png" alt="notification"
+        <a href="notification.html" class="notify"><img src="icons/Notifications.png" alt="notification"
           id="notification" /></a>
       </div>
       <a href="#" class=""id="username" style="padding-left: 8px;">Landside technologies</a>
@@ -107,7 +121,10 @@
         <div class="cover">
             <div class="editprofile">
                <img src="icons/profile_img.png" alt="">
-               <a href="#" class="fs10">Tap to change picture</a>
+               <div style="position: relative;">
+                <input type="file" class="tapInput">
+                <p class="fs10 tap">Tap to change picture</p>
+               </div>
                <a href="editprofile.html" class="edit">Edit profile</a>
             </div>
             

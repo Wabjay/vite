@@ -1,0 +1,150 @@
+.ridersInfo > div{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 63px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-bottom: 0.5px solid #CED9E8;;
+  }
+  .ridersInfo > div:hover{
+    background: #F2F9FF;
+  }
+  .ridersInfo > div:first-child{
+    height: 41px;
+    background: #F2F9FF;
+  }
+  .ridersInfo div{
+      align-self: center;
+  }
+  .ridersInfo > div:first-child .fs14b{
+    color: #282F45;
+  }
+  .ridersInfo .fs12b{
+    color: #43495C;
+  }
+  .status{
+      padding: 8px 10px;
+      border-radius: 24px;
+      width: fit-content;
+  }
+  .status.idle{
+    background: #FFEDED;
+    color: #F12A2C;
+  }
+  .status.ontrip{
+    background: #EDFEEC;
+    color: #12B413;
+
+  }
+ .actions{
+    color: #0370D5;
+ }
+  .make_request .fs16{
+    color: #fff;
+  }
+  .topLinks {
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin: 0 32px;
+}
+  .topLinks > div{
+    justify-self: end;
+  }
+  .topLinks .custom-select{
+    margin-bottom: 24px;
+    justify-content: space-between;
+  }
+  .topLinks .custom-select :hover{
+    border: none;
+  }
+  /* ADD TO BIGGER SCREEN TOO */
+  .statistic{
+    /* display: flex; */
+    /* justify-content: start;  */
+    margin: 0 16px;
+    margin-bottom: 40px;
+  }
+  .statistic > div{
+    width: 100%;
+    max-width: 288px;
+    display: flex;
+    padding: 20px 24px;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 2px rgba(107, 111, 125, 0.18), -1px -1px 2px rgba(107, 111, 125, 0.18);
+    border-radius: 8px;
+  }
+
+  .statistic > div:first-child{
+    margin-bottom: 16px;
+  }
+  
+  .statistic img{
+    padding-right: 16px;
+  }
+
+  .statistic > div p{
+    color: #034C8F;
+  }
+  .riders{
+    display: flex;
+    justify-content: start; 
+    margin: 0 16px 8px;
+  }
+  .cover{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0%;
+    height: 100%;
+    border: none;
+    border-top: 0.5px solid #CED9E8;;
+    padding: 0;
+        }
+  .emptynote{
+    background: #FFFDFD;
+  }
+
+
+
+  
+
+@media only screen and (min-width: 1024px) {
+.topLinks > div{
+    display: flex;
+  }
+  .topLinks .custom-select{
+    margin-bottom: 0;
+    margin-right: 32px;
+    justify-content: space-between;
+  }
+.statistic{
+    margin-left: 32px;
+    margin-bottom: 40px;
+    display: flex; 
+    justify-content: start; 
+  }
+  .statistic > div:first-child{
+    margin-right: 48px;
+    margin-bottom: 0;
+}
+.riders{
+    margin-left: 32px;
+  }
+  .riders img{
+    margin-right: 8px;
+  }
+
+.cover{
+    width: 100%;
+    max-width: 100%;
+  }
+  .ridersInfo > div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) 24px;
+    justify-content: space-between;
+    align-content: center;
+    height: 63px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}

@@ -57,7 +57,7 @@ header {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  border-bottom: 1px solid #CED9E8;
+  border-bottom: 0.5px solid #CED9E8;
 }
 
 .profile{
@@ -298,7 +298,7 @@ margin: 0 16px;
 .cover .make_request{
   margin: 40px auto;
 }
-.make_request{
+.make_request, .topLinks .custom-select{
   display: flex;
   justify-content: center;
   width: 170px;
@@ -318,7 +318,7 @@ color: #FFFFFF;
   text-align: center;
   padding: 90px 0;
 }
-.emptynote > .fs16{
+.emptynote > p{
   margin-top: 16px;
 color: #C5C9D5;
 width: 275px;

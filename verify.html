@@ -48,10 +48,10 @@
             <p class="header">Welcome to vite</p>
             <p class="text">Start sending your packages today</p>
                 <div id="code">
-                    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-                    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-                    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-                    <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                    <input type="text" class="code" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                    <input type="text" class="code" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                    <input type="text" class="code" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                    <input type="text" class="code" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
             </div>
           </div>
           <input type="submit" value="Confirm code" class="submit"/>
@@ -67,6 +67,24 @@
       </section>
     </main>
     
-    
+    <script>
+
+
+
+var list = document.querySelectorAll('.code')
+Array.from(list).forEach(function(list){
+  list.addEventListener("keyup", function() {
+    if (list.value.length == 1) {
+      list.nextElementSibling.focus()
+    }
+  });
+})
+// function moveOnMax(field,code){
+//   if(field.value.length >= field.maxLength){
+//     document.getElementById(code).focus();
+//   }
+// }
+
+    </script>
   </body>
 </html>

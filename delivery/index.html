@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/outlines.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/delivery.css"/>
+    <title>Rider's Dashboard</title>
+    <link rel="shortcut icon" href="../icons/favicon.svg" type="image/x-icon">
+    <style>
+     
+    </style>
+  </head>
+ <body>
+    <div class="container">
+    
+  <!--  header path-->
+  <header>
+    <div class="notification">
+      <p>Requests</p>
+    </div>
+    <div class="profile">
+      <div>
+        <!-- <a href="#" class="notify"><img src="icons/Notifications.png" alt="notification"
+          id="notification" /></a> -->
+      </div>
+      <a href="#" class=""id="username" style="padding-left: 8px;">Landside technologies</a>
+     <div class="avatar">
+            <div id="profilePics"><img src="../icons/avatar.png" alt="avatar" /></div>
+       
+      </div>
+    </div>
+  </header>
+  <!-- ASIDE PART -->
+  
+  <aside>
+    <div class="aside-content">
+      <a href="#">
+        <img src="../icons/hamburger.svg" alt="toggle-menu" class="hide-desktop" id="menu-open" />
+      </a>
+      <div class="sidebar hide-mobile show-desktop">
+        <div>
+          <a href="#">
+            <img src="../icons/hamburger.svg" alt="toggle-menu" class="exit hide-desktop" id="exit" />
+          </a>
+          <a href="../index.html">
+            <img src="../icons/logo.svg" class="logo" alt="" /></a>
+        </div>
+  
+        <!-- links/ dropdown content -->
+        <ul class="links">
+          <li class="activelink">
+            <a href="../index.html" id="dashboard-btn" class="">
+              Dashboard</a>
+          </li>
+          <li>
+            <a href="../profile.html" id="referral-btn" class="">Map</a>
+          </li>
+          <li>
+            <a href="../profile.html" id="referral-btn" class="">Settings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+      <!-- ASIDE PART -->
+
+      <!-- MAIN PART -->
+      <main>
+            <div class="topLinks">
+              <p class="new_request black">Your statistics shows here</p>
+              <div>
+                <div class="custom-select" >
+                  <select disabled>
+                  <option value="">Today</option>
+                  <option value="Envelope">Yesterday</option>
+                  <option value="Boxer">This week</option>
+                  <option value="Boxer">This month</option>
+                  <option value="Boxer">Last 3 months</option>
+                  </select>
+                  </div>
+                  <a href="createrequest.html"><div class="make_request">
+                    <img src="icons/Add_request.png" alt="">
+                  <p class="fs16">Add a rider</p>
+                </div></a>
+              </div>
+              </div>
+              
+
+            <div class="statistic">
+
+              <div class="numberOfRider">
+                <img src="../icons/riderNumber.svg" alt="">
+                <div><p class="fs24b">404</p>
+                <p class="fs12m">Number of riders</p></div>
+              </div>
+
+              <div class="riderPay">
+                 <img src="../icons/riderPay.svg" alt="">
+                <div><p class="fs24b">N800,000</p>
+                <p class="fs12m">Amount riders made</p></div>
+              </div>
+            </div>
+            <div class="riders">
+              <img src="../icons/Riders.png" alt="">
+                <p class="fs16m">Riders</p>
+            </div>
+
+
+             <!-- SHOW REQUESTS IF EMPTY -->
+        <div class="cover" id="emptyrequest" style="display: none;">
+          <div class="emptynote">
+            <img src="../icons/Riders_big.svg" alt="" srcset="" >
+            <p  class="fs16">You have not added any riders</p>
+            <div class="make_request center">
+              <!-- <img src="icons/Add_request.png" alt=""> -->
+            <p class="fs16">Add a rider</p>
+          </div>
+          </div>
+          
+        </div>
+
+         <!-- SHOW REQUESTS IF NOT EMPTY -->
+       <div class="cover">
+        <div class="ridersInfo">
+          <div>
+            <p class="fs14b">Rider name</p>
+            <p class="fs14b">Email address and phone number</p>
+            <p class="fs14b">Status</p>
+            <p class="fs14b">Actions</p>
+            <p></p>
+          </div>
+          <div>
+            <div>
+              <p class="ridersName fs14b">Flourense dairo</p>
+              <p class="userName fs12m">@flourensce</p>
+            </div>
+            <div>
+              <p class="email fs14b">quecordinton@gmail.com</p>
+              <p class="phoneNumber fs12m">08199381881</p>
+            </div>
+            <div>
+              <p class="status fs12b ontrip">OnTrip</p>
+            </div>
+            <div>
+              <p class="actions fs14b"> View on Map</p>
+            </div>
+            <div>
+              <img src="../icons/options.svg"  class="options" alt="options image">
+            </div>
+            
+          </div>
+          <div>
+            <div>
+              <p class="ridersName fs14b">Flourense dairo</p>
+              <p class="userName fs12m">@flourensce</p>
+            </div>
+            <div>
+              <p class="email fs14b">quecordinton@gmail.com</p>
+              <p class="phoneNumber fs12m">08199381881</p>
+            </div>
+            <div>
+              <p class="status fs12b idle">Idle</p>
+            </div>
+            <div>
+              <p class="actions fs14b"> View on Map</p>
+            </div>
+            <div>
+              <img src="../icons/options.svg"  class="options" alt="options image">
+            </div>
+            
+          </div>
+          </div>
+           
+          
+
+        </div>
+
+
+       </div>
+
+      </main>
+      <!-- MAIN PART -->
+    </div>
+
+</div>
+
+
+
+
+    <script src="../js/style.js"></script>
+    <script src="../js/outlines.js"></script>
+    <!-- <script src="js/jquery-1.11.1.min.js"></script> -->
+   
+    <script>
+       transactionList();
+   </script>
+
+
+
+  </body>
+</html>
+   
