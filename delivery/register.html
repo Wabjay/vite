@@ -1,0 +1,217 @@
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Page</title>
+
+   
+    <link rel="stylesheet" href="../css/outlines.css" />
+    <link rel="stylesheet" href="../css/sign.css" />
+    <link rel="shortcut icon" href="../icons/favicon.svg" type="image/x-icon">
+    <style>
+     .loader{
+       height: 6px;
+       border-radius: 8px;
+       background: #DCEDFE;
+       overflow: hidden;
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       margin-bottom: 11px;
+     }
+     .half, .secondhalf{
+       /* width: 50%; */
+       /* text-align: left; */
+       background: #0370D5;
+     }
+     .space{
+       margin-top: 32px;
+       margin-bottom: 16px;
+       text-align: left;
+     }
+     .register, .credentials{
+       border: none;
+     }
+     
+     .click, .display{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  background: #F9FBFE;
+border: 1px dashed #9B9EA9;
+border-radius: 8px;
+margin-top: 8px;
+    }
+    .click > p, .display p{
+      padding-left: 10px;
+    }
+    .click input{
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+    }
+    .display{
+      border: 0.5px dashed #C5C9D5;
+      border-radius: 8px;
+      justify-content: space-between;
+      padding: 0 16px;
+      
+  background: transparent;
+    }
+    .display > div{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .splitUpload{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 14px;
+    }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="../icons/Whitevitelogo.svg" alt="" class="logo"
+      /></a>
+    </header>
+    <main>
+      <section>
+       
+        <p class="header">Register your account</p>
+
+          <span id="logStatus"></span>
+
+        <form action="" class="cover">
+         
+          <div class="loader">
+            <div class="half"></div>
+            <div class="secondhalf"></div>
+          </div>
+          <div class="flex">
+            <p class="fs14m">Business information</p>
+            <p class="fs14m">Upload credentials</p>
+          </div>
+          <div class="register" style="display: none;">
+            
+          <p class="fs20bb space">Fill in business information</p>
+          
+
+          <div class="form-control">
+            <label for="fullname">Business Name</label>
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              value=""
+              required
+              placeholder="Business Name"
+            />
+          </div>
+         
+          <div class="form-control">
+            <label for="email">Email adress</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value=""
+              required
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <div class="form-control">
+            <label for="phone">Phone number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              value=""
+              required
+              placeholder="Your phone number"
+            />
+          </div>
+
+
+          <div class="form-control">
+            <label for="password">Password</label>
+            <!-- <div class="input-container"> -->
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value=""
+              required
+              placeholder="Business password"
+              autocomplete="off"
+            />
+            <!-- </div> -->
+          </div>
+
+          <input type="submit" value="Proceed to upload" class="submit" />
+          
+        </div>
+        <div class="credentials">
+          <p class="fs20bb space">Upload your credentials</p>
+          <p class="fs16">Please upload your  certificate of incorporation, Memorandum
+            and articles of association, Recent utility bill/Proof of address
+            and a valid ID of at least one of your directors</p>
+            <div class="click">
+              <input type="file">
+              <img src="../icons/Add_attachment.png" alt="">
+              <p class="fs14m">Upload riders’s card</p>
+            </div>
+            <div class="splitUpload">
+              <div class="display">
+                <div>
+                  <img src="../icons/Add_attachment.png" alt="">
+                  <p id="uploadDetail" class="fs14m">File name</p>
+                </div>
+                <img src="../icons/Close_button.png" alt="">
+              </div>
+              <div class="display">
+                <div>
+                  <img src="../icons/Add_attachment.png" alt="">
+                  <p id="uploadDetail" class="fs14m">File name</p>
+                </div>
+                <img src="../icons/Close_button.png" alt="">
+              </div>
+              <div class="display">
+                <div>
+                  <img src="../icons/Add_attachment.png" alt="">
+                  <p id="uploadDetail" class="fs14m">File name</p>
+                </div>
+                <img src="../icons/Close_button.png" alt="">
+              </div>
+              <div class="display">
+                <div>
+                  <img src="../icons/Add_attachment.png" alt="">
+                  <p id="uploadDetail" class="fs14m">File name</p>
+                </div>
+                <img src="../icons/Close_button.png" alt="">
+              </div>
+            </div>
+            <input type="submit" value="Proceed to upload" class="submit" />
+        </div>
+
+        </form>
+        <!-- <div class="line"></div> -->
+        <div class="long">
+          <p class="signin">
+            Already have an account? <a href="login.html"> Sign in</a>
+          </p>
+        </div>
+      
+      </section>
+    </main>
+
+
+  </body>
+</html>

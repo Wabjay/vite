@@ -1,13 +1,17 @@
+.show-desktop{
+    display: none;
+}
 .ridersInfo > div{
     display: flex;
     justify-content: space-between;
     align-content: center;
     height: 63px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-bottom: 0.5px solid #CED9E8;;
   }
   .ridersInfo > div:hover{
+      align-self: center;
     background: #F2F9FF;
   }
   .ridersInfo > div:first-child{
@@ -103,11 +107,182 @@ margin: 0 32px;
   .emptynote{
     background: #FFFDFD;
   }
+.links li:nth-child(1) {
+  background-image: url(../icons/Dashboard.png);
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  background-size: 24px;
+}
 
+.links li:nth-child(2){
+  background-image: url(../icons/Map.png);
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  background-size: 24px;
+}
+.links li:nth-child(3){
+  background-image: url(../icons/Settings.png);
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  background-size: 24px;
+}
+.links li:nth-child(1).activelink {
+  background-image: url(../icons/Dashboard_active.svg);
+}
 
+.links li:nth-child(2).activelink{
+  background-image: url(../icons/Map_active.svg);
+}
 
+.links li:nth-child(3).activelink{
+  background-image: url(../icons/Settings_active.svg);
+}
+
+/* INDEX PAGE CSS */
+.editPanel{
+  display: none;
+  width: 139px;
+  height: 88px;
+  border: 0.5px solid #9B9EA9;
+   box-shadow: 1px 1px 2px rgba(107, 111, 125, 0.18), -1px -1px 2px rgba(107, 111, 125, 0.18);
+   border-radius: 8px;
+   overflow: hidden;
+   background-color: #fff;
+   position: absolute;
+   right: 53px;
+}
+.editPanel p{
+ font-family: Inter;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 16px;
+ line-height: 22px;
+ color: #0D152E;
+ height: 44px;
+ align-self: center;
+ padding: 11px 16px;
+}
+.editPanel p:hover{
+ background: #F2F9FF;
+}
+#addRider{
+  position: absolute;
+  margin: auto;
+}
+ form{
+  display: block;
+  margin: auto;
+  margin-top: 120px;
+  width:90%;
+  max-width: 436px;
+  background-color: #fff;
+  /* padding: 16px 24px; */
+  border-radius: 16px;
+}
+form img{
+  width: 24px;
+  height: 24px;
+}
+#addRider, #editRider{
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 10;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0, 0, 0); /* Fallback color */
+background: linear-gradient(
+180deg,
+rgba(155, 158, 169, 0.1) 1.42%,
+rgba(155, 158, 169, 0.1) 51.91%,
+rgba(155, 158, 169, 0.1) 100%
+);
+}
+.addheader{
+display: flex;
+justify-content: space-between;
+align-content: center;
+border-bottom: 1px solid #CED9E8;
+padding: 16px 24px;
+}
+.form-control, .upload{
+margin: 24px;
+}
+.form-control{
+position: relative;
+}
+label{
+padding-bottom: 0;
+}
+.click, #display{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 44px;
+background: #F9FBFE;
+border: 1px dashed #9B9EA9;
+border-radius: 8px;
+margin-top: 8px;
+}
+.click > p, #display p{
+ padding-left: 10px;
+}
+.click input{
+ width: 100%;
+ position: absolute;
+ opacity: 0;
+}
+#display{
+ border: 0.5px dashed #C5C9D5;
+ border-radius: 8px;
+ justify-content: space-between;
+ padding: 0 16px;
+ 
+background: transparent;
+}
+#display > div{
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+}
+.submitRider{
+ background: #F9FBFE;
+ text-align: center;
+ padding-top: 30px;
+ height: 105px;
+ 
+}
+.submitRider input{
+ max-width: 328px;
+ height: 44px;
+ background: #0370D5;
+ border-radius: 8px;
+ border: none;
+ font-family: Inter;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 16px;
+ line-height: 22px;
+ color: #fff;
+}
+#show {
+background: #fff;
+position: absolute;
+top: 40px;
+right: 20px;
+margin-right: 0;
+}
+/* INDEX PAGE END */
   
-
+@media only screen and (min-width: 750px) {
+  
+  #show {
+top: 40px;
+  }
+}
 @media only screen and (min-width: 1024px) {
 .topLinks > div{
     display: flex;
@@ -127,6 +302,14 @@ margin: 0 32px;
     margin-right: 48px;
     margin-bottom: 0;
 }
+.show-desktop{
+    display: block;
+}
+.ridersInfo > div{
+    align-content: center;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 .riders{
     margin-left: 32px;
   }

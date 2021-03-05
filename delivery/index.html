@@ -11,7 +11,9 @@
     <title>Rider's Dashboard</title>
     <link rel="shortcut icon" href="../icons/favicon.svg" type="image/x-icon">
     <style>
-     
+     .fs12m{
+      color: #43495C;
+     }
     </style>
   </head>
  <body>
@@ -20,7 +22,7 @@
   <!--  header path-->
   <header>
     <div class="notification">
-      <p>Requests</p>
+      <p>Dashboard</p>
     </div>
     <div class="profile">
       <div>
@@ -53,14 +55,14 @@
         <!-- links/ dropdown content -->
         <ul class="links">
           <li class="activelink">
-            <a href="../index.html" id="dashboard-btn" class="">
+            <a href="index.html" id="dashboard-btn" class="">
               Dashboard</a>
           </li>
           <li>
-            <a href="../profile.html" id="referral-btn" class="">Map</a>
+            <a href="map.html" id="referral-btn" class="">Map</a>
           </li>
           <li>
-            <a href="../profile.html" id="referral-btn" class="">Settings</a>
+            <a href="settings.html" id="referral-btn" class="">Settings</a>
           </li>
         </ul>
       </div>
@@ -84,13 +86,168 @@
                   <option value="Boxer">Last 3 months</option>
                   </select>
                   </div>
-                  <a href="createrequest.html"><div class="make_request">
-                    <img src="icons/Add_request.png" alt="">
+                  <div class="make_request">
+                    <img src="../icons/Add_request.png" alt="">
                   <p class="fs16">Add a rider</p>
-                </div></a>
+                </div>
               </div>
               </div>
-              
+              <div id="addRider">
+                
+        <form action="">
+          <div class="addheader">
+            <p class="fs20bb">Add a rider</p>
+            <img src="../icons/Close_button.png" alt="" class="closeAdd">
+          </div>
+          <div class="form-control">
+            <label for="fullname">Rider fullname</label>
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              value="Rider fullname"
+            />
+          </div>
+         
+          <div class="form-control">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              value=""
+              required
+              placeholder="Username"
+            />
+          </div>
+          <div class="form-control">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value=""
+              required
+              placeholder="Email address"
+            />
+          </div>
+
+          
+          <div class="form-control">
+            <label for="phone">Phone number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              value=""
+              required
+              placeholder="Phone number"
+            />
+          </div>
+
+
+          <div class="form-control">
+            <label for="password">Create a password</label>
+            <!-- <div class="input-container"> -->
+            <input
+              type="text"
+              name="password"
+              id="password"
+              value=""
+              required
+              placeholder="Password"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="upload">
+            <label for="upload">Upload valid riders card</label>
+            
+            <div class="click">
+              <input id="file-upload" name='upload_cont_img' type="file">
+              <img src="../icons/Add_attachment.png" alt="">
+              <p class="fs14m">Upload riders’s card</p>
+            </div>
+            <div id="display">
+              <div>
+                <img src="../icons/Add_attachment.png" alt="">
+                <p id="uploadDetail file-name" class="fs14m">File name</p>
+              </div>
+              <img src="../icons/Close_button.png" alt="">
+            </div>
+          </div>
+          <div class="submitRider">
+            <input type="submit" value="Add new rider" class="submit" />
+          </div>
+          
+        </form>
+              </div>
+              <div id="editRider">
+                
+                <form action="">
+                  <div class="addheader">
+                    <p class="fs20bb">Edit a rider</p>
+                    <img src="../icons/Close_button.png" alt="" class="closeEdit">
+                  </div>
+                  <div class="form-control">
+                    <label for="editFullname">Rider fullname</label>
+                    <input
+                      type="text"
+                      name="fullname"
+                      id="editFullname"
+                      value="Flourense dairo"
+                    />
+                  </div>
+                 
+                  <div class="form-control">
+                    <label for="editUsername">@Username</label>
+                    <input
+                      type="text"
+                      name="username"
+                      id="editUsername"
+                      value="@Flourense"
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label for="editEmail">Email address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="editEmail"
+                      value="Floursesecedairo@gmail.com"
+                    />
+                  </div>
+        
+                  
+                  <div class="form-control">
+                    <label for="editPhone">Phone number</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="editPhone"
+                      value="08199381881"
+                    />
+                  </div>
+        
+        
+                  <div class="form-control">
+                    <label for="editPassword">Password</label>
+                    <!-- <div class="input-container"> -->
+                    <input
+                      type="text"
+                      name="password"
+                      id="editPassword"
+                      value="Transcebff"
+                    />
+                  </div>
+        
+                  
+                  <div class="submitRider">
+                    <input type="submit" value="Save details" class="submit" />
+                  </div>
+                  
+                </form>
+                      </div>
 
             <div class="statistic">
 
@@ -119,7 +276,7 @@
             <p  class="fs16">You have not added any riders</p>
             <div class="make_request center">
               <!-- <img src="icons/Add_request.png" alt=""> -->
-            <p class="fs16">Add a rider</p>
+            <p class="fs16" id="addRider">Add a rider</p>
           </div>
           </div>
           
@@ -128,10 +285,11 @@
          <!-- SHOW REQUESTS IF NOT EMPTY -->
        <div class="cover">
         <div class="ridersInfo">
+         
           <div>
             <p class="fs14b">Rider name</p>
-            <p class="fs14b">Email address and phone number</p>
-            <p class="fs14b">Status</p>
+            <p class="fs14b show-desktop">Email address and phone number</p>
+            <p class="fs14b show-desktop">Status</p>
             <p class="fs14b">Actions</p>
             <p></p>
           </div>
@@ -140,11 +298,11 @@
               <p class="ridersName fs14b">Flourense dairo</p>
               <p class="userName fs12m">@flourensce</p>
             </div>
-            <div>
+            <div class="show-desktop">
               <p class="email fs14b">quecordinton@gmail.com</p>
               <p class="phoneNumber fs12m">08199381881</p>
             </div>
-            <div>
+            <div class="show-desktop">
               <p class="status fs12b ontrip">OnTrip</p>
             </div>
             <div>
@@ -153,18 +311,21 @@
             <div>
               <img src="../icons/options.svg"  class="options" alt="options image">
             </div>
-            
+            <div class="editPanel">
+              <p class="edit">Edit</p>
+              <p class="delete">Delete</p>
+            </div>
           </div>
           <div>
             <div>
               <p class="ridersName fs14b">Flourense dairo</p>
               <p class="userName fs12m">@flourensce</p>
             </div>
-            <div>
+            <div class="show-desktop">
               <p class="email fs14b">quecordinton@gmail.com</p>
               <p class="phoneNumber fs12m">08199381881</p>
             </div>
-            <div>
+            <div class="show-desktop">
               <p class="status fs12b idle">Idle</p>
             </div>
             <div>
@@ -182,8 +343,6 @@
         </div>
 
 
-       </div>
-
       </main>
       <!-- MAIN PART -->
     </div>
@@ -195,10 +354,10 @@
 
     <script src="../js/style.js"></script>
     <script src="../js/outlines.js"></script>
-    <!-- <script src="js/jquery-1.11.1.min.js"></script> -->
+    <script src="../js/delivery.js"></script>
    
     <script>
-       transactionList();
+  
    </script>
 
 
