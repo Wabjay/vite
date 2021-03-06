@@ -70,16 +70,43 @@ color: #3662DC;
   
   margin: 4px 0px;
 }
+.links li:nth-child(1) {
+  background-image: url(../icons/Dashboard.png);
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  background-size: 24px;
+}
 
+.links li:nth-child(2){
+  background-image: url(../icons/Map.png);
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  background-size: 24px;
+}
+.links li:nth-child(3){
+  background-image: url(../icons/Settings.png);
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  background-size: 24px;
+}
+.links li:nth-child(1).activelink {
+  background-image: url(../icons/Dashboard_active.svg);
+}
+
+.links li:nth-child(2).activelink{
+  background-image: url(../icons/Map_active.svg);
+}
+
+.links li:nth-child(3).activelink{
+  background-image: url(../icons/Settings_active.svg);
+}
 .upload_profile {
   margin-top: 24px;
   margin-bottom: 34px;
   width: 288px;
-  display: -ms-grid;
-  display: grid;
-  grid-column-gap: 4px;
-  -ms-grid-columns: 72px auto;
-  grid-template-columns:  72px auto;
+  /* display: -ms-grid; */
+  display: flex;
+  align-items: center;
 }
 #profilePix {
   opacity: 0;
@@ -93,7 +120,7 @@ font-style: normal;
 font-weight: 600;
 font-size: 16px;
 line-height: 22px;
-color: #282F45;
+/* color: #282F45; */
 }
 .upload_profile p:nth-child(2) {
   margin: 0;
@@ -104,17 +131,6 @@ font-weight: normal;
 font-size: 14px;
 line-height: 19px;
 color: #6B6F7D;
-}
-.upload_profile > div:nth-child(2) {
-  position: relative;
-  width: fit-content;
-  overflow: hidden;
-  /* border: solid 0.5px black; */
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 
 .upload_profile img {
