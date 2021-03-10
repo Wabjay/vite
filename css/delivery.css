@@ -1,7 +1,7 @@
 .show-desktop{
     display: none;
 }
-.ridersInfo > div{
+.ridersInfo > div:first-child, #requestContainer .requestDetails{
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -10,13 +10,30 @@
     padding-right: 16px;
     border-bottom: 0.5px solid #CED9E8;;
   }
-  .ridersInfo > div:hover{
+
+  
+  .ridersInfo #requestContainer{
+display: block;
+
+  }
+  .ridersInfo #requestContainer .requestDetails{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 63px;
+    border-bottom: 0.5px solid #CED9E8;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .ridersInfo #requestContainer .requestDetails:hover{
       align-self: center;
-    background: #F2F9FF;
+      
+background: #F2F9FF;
   }
   .ridersInfo > div:first-child{
     height: 41px;
     background: #F2F9FF;
+    align-items: center;
   }
   .ridersInfo div{
       align-self: center;
@@ -151,6 +168,9 @@ margin: 0 32px;
    background-color: #fff;
    position: absolute;
    right: 53px;
+}
+.editPanel.active{
+  display: block;
 }
 .editPanel p{
  font-family: Inter;
@@ -306,7 +326,8 @@ top: 40px;
 .show-desktop{
     display: block;
 }
-.ridersInfo > div{
+
+.ridersInfo > div:first-child, .ridersInfo #requestContainer .requestDetails{
     align-content: center;
     padding-left: 32px;
     padding-right: 32px;
@@ -322,13 +343,13 @@ top: 40px;
     width: 100%;
     max-width: 100%;
   }
-  .ridersInfo > div{
+  .ridersInfo #requestContainer .requestDetails{
     display: grid;
     grid-template-columns: repeat(4,1fr) 24px;
     justify-content: space-between;
     align-content: center;
     height: 63px;
-    padding-left: 32px;
-    padding-right: 32px;
+    /* padding-left: 32px;
+    padding-right: 32px; */
   }
 }

@@ -91,7 +91,7 @@ var selectedInput = '<div class="inputContainer" id="inputContainer-'+ container
        '<label for="name" id="label">Select parcel type</label>'+
                   '<div class="custom-select">'+
                       '<select >'+'<option value="0">Select option</option>'+
-                          '<option value="1">Envelope</option>'+'<option value="2">Boxer</option>'+
+                          '<option value="Envelope">Envelope</option>'+'<option value="Boxer">Boxer</option>'+
                        '</select>'+'</div>'+'</div>'+
                        '<div class="checker">'+'<label class="checkbox">Food item' +
                           '<input type="checkbox">'+'<span class="checkmark"></span>'+
@@ -114,7 +114,9 @@ var detail = '<div class="detail mt24" id="detail-' + detailLength +'">'+'<div>'
    parcelOption.innerHTML += selectedInput;
    var parcelAddition = document.getElementById("parcelAddition");
    parcelAddition.innerHTML += detail;
-
+$('.select-selected').on('click', function(){
+    console.log('hgdyuu')
+})
    $('.detail>img.cancel').on('click', function () {
      if ($('.detail').length == 1) return;
     const id = $(this).parent().attr('id').split('-')[1];

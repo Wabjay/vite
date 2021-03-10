@@ -164,7 +164,7 @@ margin-top: 8px;
             and articles of association, Recent utility bill/Proof of address
             and a valid ID of at least one of your directors</p>
             <div class="click">
-              <input type="file">
+              <input type="file" multiple id="file-input">
               <img src="../icons/Add_attachment.png" alt="">
               <p class="fs14m">Upload riders’s card</p>
             </div>
@@ -212,6 +212,16 @@ margin-top: 8px;
       </section>
     </main>
 
+<script>
+  var fileInput = document.getElementById('file-input');
+  var fileList = [];
 
+  fileInput.addEventListener('change', function(evnt){
+    fileList = [];
+    for (var i = 0; i < fileInput.files.length; i++){
+      fileList.push(fileInput.files[i]);
+    }
+  });
+</script>
   </body>
 </html>
