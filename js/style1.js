@@ -99,13 +99,13 @@ var selectedInput = '<div class="inputContainer" id="inputContainer-'+ container
                            '<input type="checkbox">'+'<span class="checkmark">'+'</span>'+
                             '</label>'+'</div>'+'<div class="textInput">'+
                               '<label for="name">How many parcels</label>'+
-                              '<input type="text" name="name" id="name" value="" placeholder="Number of parcels">'+
+                              '<input type="text" name="numbers" id="numbers-'+ containerLength +'" class="numbers" value="" placeholder="Number of parcels">'+
                               '</div><div>';
 
 // DIV FOR MULTIPLE SELECTED PARCELS
 
 const detailLength = document.getElementsByClassName('detail').length;
-var detail = '<div class="detail mt24" id="detail-' + detailLength +'">'+'<div>'+'<p class="fs16" id="typeOfParcel">Envelope <span class="numberOfParcel">(2 parcels)</span></p>'+
+var detail = '<div class="detail mt24" id="detail-' + detailLength +'">'+'<div>'+'<p class="fs16" id="typeOfParcel">Employer<span class="numberOfParcel">(2 parcels)</span></p>'+
                  '</div>'+'<img src="icons/close_button.png" alt="dd" class="cancel">'+'</div>';
 
 
@@ -114,9 +114,10 @@ var detail = '<div class="detail mt24" id="detail-' + detailLength +'">'+'<div>'
    parcelOption.innerHTML += selectedInput;
    var parcelAddition = document.getElementById("parcelAddition");
    parcelAddition.innerHTML += detail;
-$('.select-selected').on('click', function(){
-    console.log('hgdyuu')
-})
+//    console.log(document.getElementById('numbers').value)
+// $('.custom-select').on('click', function(){
+//     console.log(this)
+// })
    $('.detail>img.cancel').on('click', function () {
      if ($('.detail').length == 1) return;
     const id = $(this).parent().attr('id').split('-')[1];
@@ -126,17 +127,23 @@ $('.select-selected').on('click', function(){
  });
    
 // ADD PARCEL BUTTON + DUPLICATE DIV FOR
-
-
-// GET THE VALUE OF THE PARCEL TYPES AND THE TOTAL NUMBER OF PARCEL SELECTED
-let sumDetail = document.querySelectorAll('.detail');   // EACH TRANSACTION
-       let sumDetail_arr = Array.prototype.slice.call(sumDetail);
-       sumDetail_arr.forEach(function(val){
-           
-         });  
+console.log(document.querySelectorAll('.numbers').length)
 
 
         };
+const parcelNumber = document.querySelectorAll('.numbers');
+let parcelNumber_arr = Array.prototype.slice.call(parcelNumber);
+    parcelNumber_arr.forEach(function(val){
+        val.onchange = function(){
+            console.log(document.querySelectorAll('.numbers').length)
+            document.querySelector('.detail').style.display = "block"
+        }
+        
+         });  
+//         parcelNumber.onchange = function(){
+//             document.querySelector('.detail').style.display = "block"
+//         }
+
         // duplicateEntry();
 
   var addParcel = document.getElementById('addParcel');

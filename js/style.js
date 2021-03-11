@@ -136,7 +136,7 @@ let sumDetail = document.querySelectorAll('.detail');   // EACH TRANSACTION
 
         };
         // duplicateEntry();
-
+        function addParcel(){
   var addParcel = document.getElementById('addParcel');
    addParcel.onclick = function(){duplicateEntry()
       //  parcelOption.innerHTML += selectedInput;
@@ -144,6 +144,7 @@ let sumDetail = document.querySelectorAll('.detail');   // EACH TRANSACTION
 
        addClickers()
    }
+  }
 
    
 

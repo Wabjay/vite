@@ -169,11 +169,11 @@
               <p class="fs14m">Upload riders’s card</p>
             </div>
             <div id="display">
-              <div>
+              <!-- <div class="filenames">
                 <img src="../icons/Add_attachment.png" alt="">
                 <p id="uploadDetail file-name" class="fs14m">File name</p>
               </div>
-              <img src="../icons/Close_button.png" alt="">
+              <img src="../icons/Close_button.png" alt=""> -->
             </div>
           </div>
           <div class="submitRider">
@@ -364,6 +364,20 @@
     <script>
   dropDown();
   requestDetails();
+  $(function() {
+ $('input:file').change(function(e){
+     var fileName = $(this).val();
+     
+     $('#display').html('<div class="filenames">'+'<img src="../icons/Add_attachment.png" alt="">'+'<p id="uploadDetail file-name" class="fs14m">'+fileName+'</p>'+'</div>'+'<img src="../icons/Close_button.png" alt="">');
+ });
+ 
+});
+$(document).ready(function(){
+$('.filenames>img').on('click', function() {
+  console.log($('.filenames>img'))
+    $(this).parent().remove();
+ });
+});
    </script>
 
 

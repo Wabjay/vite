@@ -164,12 +164,12 @@ margin-top: 8px;
             and articles of association, Recent utility bill/Proof of address
             and a valid ID of at least one of your directors</p>
             <div class="click">
-              <input type="file" multiple id="file-input">
+              <input type="file" name="files[]" multiple id="file-input">
               <img src="../icons/Add_attachment.png" alt="">
               <p class="fs14m">Upload riders’s card</p>
             </div>
             <div class="splitUpload">
-              <div class="display">
+              <!-- <div class="display">
                 <div>
                   <img src="../icons/Add_attachment.png" alt="">
                   <p id="uploadDetail" class="fs14m">File name</p>
@@ -196,7 +196,7 @@ margin-top: 8px;
                   <p id="uploadDetail" class="fs14m">File name</p>
                 </div>
                 <img src="../icons/Close_button.png" alt="">
-              </div>
+              </div> -->
             </div>
             <input type="submit" value="Proceed to upload" class="submit" />
         </div>
@@ -212,16 +212,28 @@ margin-top: 8px;
       </section>
     </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-  var fileInput = document.getElementById('file-input');
-  var fileList = [];
-
-  fileInput.addEventListener('change', function(evnt){
-    fileList = [];
-    for (var i = 0; i < fileInput.files.length; i++){
-      fileList.push(fileInput.files[i]);
-    }
+    $(function() {
+  $('input:file').on('change' , function(){
+    $.each(this.files , (i , v) => {
+      var fileName = v.name;
+      // $('.filenames').append('<div class="name">' + fileName + '</div>');
+      $('.splitUpload').append('<div class="display" id="display-' + displayLength +'"><div><img src="../icons/Add_attachment.png" alt=""><p id="uploadDetail" class="fs14m">'+fileName+'</p></div><img src="../icons/Close_button.png" class="cancel" alt=""></div>')
+    });
+    console.log($('.display>img').length)
   });
+});
+
+const displayLength = document.getElementsByClassName('display').length;
+$('.display>img').on('click', function() {
+  console.log('wert')
+    //  if ($('.display').length == 1) return;
+    const id = $(this).parent().attr('id').split('-')[1];
+    const toRemove = `#display-${id}`;
+    $(this).parent().remove();
+    $(toRemove).remove()
+ });
 </script>
   </body>
 </html>
