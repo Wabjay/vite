@@ -99,13 +99,13 @@ var selectedInput = '<div class="inputContainer" id="inputContainer-'+ container
                            '<input type="checkbox">'+'<span class="checkmark">'+'</span>'+
                             '</label>'+'</div>'+'<div class="textInput">'+
                               '<label for="name">How many parcels</label>'+
-                              '<input type="text" name="name" id="name" value="" placeholder="Number of parcels">'+
+                              '<input type="text" name="numbers" id="numbers-'+ containerLength +'" class="numbers" value="" placeholder="Number of parcels">'+
                               '</div><div>';
 
 // DIV FOR MULTIPLE SELECTED PARCELS
 
 const detailLength = document.getElementsByClassName('detail').length;
-var detail = '<div class="detail mt24" id="detail-' + detailLength +'">'+'<div>'+'<p class="fs16" id="typeOfParcel">Envelope <span class="numberOfParcel">(2 parcels)</span></p>'+
+var detail = '<div class="detail mt24" id="detail-' + detailLength +'">'+'<div>'+'<p class="fs16"><span class="typeOfParcel"></span> (<span class="numberOfParcel">0</span> parcels)</p>'+
                  '</div>'+'<img src="icons/close_button.png" alt="dd" class="cancel">'+'</div>';
 
 
@@ -135,6 +135,16 @@ let sumDetail = document.querySelectorAll('.detail');   // EACH TRANSACTION
 
 
         };
+
+
+        $('body').on('input', '.numbers', function(){
+
+          console.log($(this).val())
+          const id = $(this).parents('.inputContainer').attr('id').split('-')[1]
+              $('#detail-' + id).find('.numberOfParcel').text($(this).val());
+              $('#detail-' + id).css("display", "flex")
+        })
+
         // duplicateEntry();
         function addParcel(){
   var addParcel = document.getElementById('addParcel');

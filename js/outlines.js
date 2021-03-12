@@ -99,6 +99,12 @@ function addClickers() {
               s.selectedIndex = i;
               h.innerHTML = this.innerHTML;
               y = this.parentNode.getElementsByClassName("same-as-selected");
+              console.log(h.innerHTML)
+              //
+              
+              const id = $(this).parents('.inputContainer').attr('id').split('-')[1]
+              $('#detail-' + id).find('.typeOfParcel').text(h.innerHTML);
+              console.log($('#detail-' + id).find('.typeOfParcel'))
               yl = y.length;
               for (k = 0; k < yl; k++) {
                 y[k].removeAttribute("class");
@@ -107,6 +113,10 @@ function addClickers() {
               break;
             }
           }
+          const id = $(this).parents('.inputContainer').attr('id').split('-')[1]
+              $('#detail-' + id).find('.typeOfParcel').text(h.innerHTML);
+              console.log($('#detail-' + id).find('.typeOfParcel'))
+              $('#detail-' + id).css("display", "flex")
           h.click();
         });
         b.appendChild(c);
@@ -122,11 +132,17 @@ function addClickers() {
           s = this.parentNode.parentNode.getElementsByTagName("select")[0];
           sl = s.length;
           h = this.parentNode.previousSibling;
+          
           for (i = 0; i < sl; i++) {
             if (s.options[i].innerHTML == this.innerHTML) {
               s.selectedIndex = i;
               h.innerHTML = this.innerHTML;
               y = this.parentNode.getElementsByClassName("same-as-selected");
+              console.log(h.innerHTML)
+              
+
+
+
               yl = y.length;
               for (k = 0; k < yl; k++) {
                 y[k].removeAttribute("class");
