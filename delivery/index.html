@@ -364,20 +364,29 @@
     <script>
   dropDown();
   requestDetails();
+  document.getElementById('display').style.display = 'none';
   $(function() {
  $('input:file').change(function(e){
      var fileName = $(this).val();
-     
-     $('#display').html('<div class="filenames">'+'<img src="../icons/Add_attachment.png" alt="">'+'<p id="uploadDetail file-name" class="fs14m">'+fileName+'</p>'+'</div>'+'<img src="../icons/Close_button.png" alt="">');
+     document.getElementById('display').style.display = 'flex';
+     $('#display').html('<div class="filenames">'+'<img src="../icons/Add_attachment.png" alt="">'+'<p id="uploadDetail file-name" class="fs14m">'+fileName+'</p>'+'</div>'+'<img src="../icons/Close_button.png" alt="" class="cancel">');
  });
- 
+ const cancel = document.querySelector('.cancel');
+
+cancel.onclick = function(){
+  console.log('cancel')
+  document.getElementById('display').remove();
+}
 });
-$(document).ready(function(){
-$('.filenames>img').on('click', function() {
-  console.log($('.filenames>img'))
-    $(this).parent().remove();
- });
-});
+
+
+
+// $(document).ready(function(){
+//   $('.filenames > .cancel').on('click', function() {
+//   console.log('.filenames > .cancel');
+//     $(this).parent().remove();
+//  });
+// });
    </script>
 
 

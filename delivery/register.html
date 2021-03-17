@@ -217,23 +217,35 @@ margin-top: 8px;
     $(function() {
   $('input:file').on('change' , function(){
     $.each(this.files , (i , v) => {
+      //GET THE ID NUMBERS OF EACH IMAGE
+const displayLength = document.getElementsByClassName('display').length;
       var fileName = v.name;
       // $('.filenames').append('<div class="name">' + fileName + '</div>');
       $('.splitUpload').append('<div class="display" id="display-' + displayLength +'"><div><img src="../icons/Add_attachment.png" alt=""><p id="uploadDetail" class="fs14m">'+fileName+'</p></div><img src="../icons/Close_button.png" class="cancel" alt=""></div>')
     });
-    console.log($('.display>img').length)
-  });
-});
 
-const displayLength = document.getElementsByClassName('display').length;
-$('.display>img').on('click', function() {
+    //CLICK TO DELETE FOR EACH IMAGE
+    $('.display>img').on('click', function() {
   console.log('wert')
-    //  if ($('.display').length == 1) return;
+  const displayLength = document.getElementsByClassName('display').length;
     const id = $(this).parent().attr('id').split('-')[1];
     const toRemove = `#display-${id}`;
     $(this).parent().remove();
     $(toRemove).remove()
  });
+    console.log($('.display>img').length + "THE LENGTH OF THE IMAGES")
+  });
+});
+
+// const displayLength = document.getElementsByClassName('display').length;
+// $('.display>img').on('click', function() {
+//   console.log('wert')
+//      if ($('.display').length == 1) return;
+//     const id = $(this).parent().attr('id').split('-')[1];
+//     const toRemove = `#display-${id}`;
+//     $(this).parent().remove();
+//     $(toRemove).remove()
+//  });
 </script>
   </body>
 </html>

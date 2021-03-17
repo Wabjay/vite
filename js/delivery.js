@@ -74,10 +74,10 @@ $(document).on('click', '.options', function(){
 
 
 $(document).on('click', function(e){
-console.log(e.target.classList.value)
+// console.log(e.target.classList.value)
     let target = $('.editPanel.active');
     if(target && e.target!=target && !target.has(e.target).length && e.target.classList.value != 'options'){
-        console.log(e.target)
+        // console.log(e.target)
         target.removeClass('active');
     }
     
