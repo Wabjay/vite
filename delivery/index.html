@@ -14,6 +14,9 @@
      .fs12m{
       color: #43495C;
      }
+     .make_request{
+       cursor: pointer;
+     }
     </style>
   </head>
  <body>
@@ -367,17 +370,23 @@
   document.getElementById('display').style.display = 'none';
   $(function() {
  $('input:file').change(function(e){
-     var fileName = $(this).val();
+   if(document.getElementById('display').style.display = 'none'){
+     
+    var fileName = $(this).val();
+    console.log("Filename " + fileName)
      document.getElementById('display').style.display = 'flex';
      $('#display').html('<div class="filenames">'+'<img src="../icons/Add_attachment.png" alt="">'+'<p id="uploadDetail file-name" class="fs14m">'+fileName+'</p>'+'</div>'+'<img src="../icons/Close_button.png" alt="" class="cancel">');
- });
- const cancel = document.querySelector('.cancel');
+   }
 
-cancel.onclick = function(){
-  console.log('cancel')
-  document.getElementById('display').remove();
-}
+     const cancel = document.querySelector('.cancel');
+     cancel.onclick = function(){
+         document.getElementById('display').style.display = 'none';
+         var fileName = "";
+         console.log("Filename " + fileName)
+      }
+    });
 });
+
 
 
 
