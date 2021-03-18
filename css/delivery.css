@@ -1,6 +1,6 @@
-.show-desktop{
+/* .show-desktop{
     display: none;
-}
+} */
 .ridersInfo > div:first-child, #requestContainer .requestDetails{
     display: flex;
     justify-content: space-between;
